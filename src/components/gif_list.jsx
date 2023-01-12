@@ -10,14 +10,16 @@ import Gif from './gif';
 
 class GifList extends Component {
   renderList = () => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />);
+    const { gifs } = this.props;
+    return gifs.map(gif => <Gif id={gif.id} key={gif.id} />);
   }
+
   render() {
     return (
       <div className="gif-list">
-        {this.renderList( )}
+        {this.renderList()}
       </div>
-    )
+    );
   }
 }
 
