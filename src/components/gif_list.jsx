@@ -11,6 +11,8 @@ import Gif from './gif';
 class GifList extends Component {
   renderList = () => {
     const { gifs, selectGif } = this.props;
+    // having a selectGif here allows the parent component to take in the gif's ID
+    // selectGif props is set in the parent folder
     return gifs.map(gif => <Gif id={gif.id} key={gif.id} selectGif={selectGif} />);
   }
 

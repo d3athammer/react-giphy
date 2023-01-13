@@ -14,7 +14,6 @@ class App extends Component {
     };
     this.search();
     this.selectGif = this.selectGif.bind(this);
-    // this.setState({ selectedGifId: this.props.handleClick });
   }
 
   search = (query) => {
@@ -30,6 +29,7 @@ class App extends Component {
     });
   }
 
+  // selectGif method is to reassign the state of selectedGifId to the selectGif
   selectGif(id) {
     this.setState({
       selectedGifId: id
@@ -47,6 +47,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
+          {/* here you can change the selectGif to this id, which in turn will change selectedGifId to be featured */}
           <GifList gifs={gifs} selectGif={this.selectGif} />
         </div>
       </div>
