@@ -13,6 +13,7 @@ class App extends Component {
       selectedGifId: null
     }
     this.search();
+;
   }
 
   search = (query) => {
